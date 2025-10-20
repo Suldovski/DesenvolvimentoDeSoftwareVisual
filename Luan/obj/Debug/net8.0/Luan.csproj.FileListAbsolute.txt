@@ -1,0 +1,7 @@
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.csproj.AssemblyReference.cache
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.AssemblyInfoInputs.cache
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.AssemblyInfo.cs
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.csproj.CoreCompileInputs.cache
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LUANGABRIELILIANOSUL\Documents\AvaliacaoA2\Luan\obj\Debug\net8.0\Luan.MvcApplicationPartsAssemblyInfo.cache
