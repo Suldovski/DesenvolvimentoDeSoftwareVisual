@@ -1,0 +1,27 @@
+@baseUrl = https://localhost:7200
+@contentType = application/json
+
+### 1. Cadastrar Consumo - Bandeira Verde sem Esgoto (Consumo < 10m³)
+POST {{baseUrl}}/api/consumo/cadastrar
+Content-Type: {{contentType}}
+
+{
+  "cpf": "123.456.789-00",
+  "mes": 10,
+  "ano": 2025,
+  "m3Consumidos": 8.5,
+  "bandeira": "Verde",
+  "possuiEsgoto": false
+}
+
+### 2. Listar Todos os Consumos
+GET {{baseUrl}}/api/consumo/listar
+
+###3. Busca por CPF
+GET {{baseUrl}} /api/consumo/buscar/123.456.789-00/10/2025
+
+### 4. Remover Consumo
+DELETE {{baseUrl}}/api/consumo/remover/123.456.789-00/10/2025
+
+### 5. Verificar Total Geral
+GET {{baseUrl}}/api/consumo/total-geral
