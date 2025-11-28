@@ -154,11 +154,12 @@ public static class ConsumoEndpoints
 
     public static async Task<IResult> TotalGeral(AppDbContext context)
     {
-        var totalGeral = await context.Consumos.SumAsync(c => c.Total);
-        
-        if (totalGeral == 0)
+        // Verifica se há registros
+        bool existe = await context.Consumos.AnyAsync();
+        if (!existe)
             return Results.NotFound("Nenhum consumo encontrado para calcular o total geral.");
 
+        var totalGeral = await context.Consumos.SumAsync(c => c.Total);
         var response = new TotalGeralResponse(totalGeral);
         return Results.Ok(response);
     }
