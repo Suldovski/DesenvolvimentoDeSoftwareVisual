@@ -6,20 +6,43 @@ public static class CalculadoraAguaService
                    double adicionalBandeira, double taxaEsgoto, double total) 
         CalcularConta(double m3Consumidos, string bandeira, bool possuiEsgoto)
     {
-        
         double consumoFaturado = m3Consumidos < 10 ? 10 : m3Consumidos;
 
-        double tarifa = consumoFaturado switch
+        // Calcular valor da água por faixas (progressivo):
+        // 0-10 -> 2.50, 11-20 -> 3.50, 21-50 -> 5.00, >50 -> 6.50
+        double restante = consumoFaturado;
+        double valorAgua = 0.0;
+
+        // Faixa 0-10 (até 10 m3)
+        double faixa = Math.Min(restante, 10);
+        valorAgua += faixa * 2.50;
+        restante -= faixa;
+
+        if (restante > 0)
         {
-            <= 10 => 2.50,
-            <= 20 => 3.50,
-            <= 50 => 5.00,
-            _ => 6.50
-        };
+            // Faixa 11-20 (próximos 10 m3)
+            faixa = Math.Min(restante, 10);
+            valorAgua += faixa * 3.50;
+            restante -= faixa;
+        }
 
-       
-        double valorAgua = consumoFaturado * tarifa;
+        if (restante > 0)
+        {
+            // Faixa 21-50 (próximos 30 m3)
+            faixa = Math.Min(restante, 30);
+            valorAgua += faixa * 5.00;
+            restante -= faixa;
+        }
 
+        if (restante > 0)
+        {
+            // Acima de 50
+            valorAgua += restante * 6.50;
+            restante = 0;
+        }
+
+        // Tarifa: calcular tarifa média por m3 faturado (útil para armazenar/mostrar)
+        double tarifaMedia = consumoFaturado > 0 ? valorAgua / consumoFaturado : 0.0;
 
         double percentualBandeira = bandeira.ToLower() switch
         {
@@ -31,12 +54,10 @@ public static class CalculadoraAguaService
 
         double adicionalBandeira = valorAgua * percentualBandeira;
 
-       
         double taxaEsgoto = possuiEsgoto ? (valorAgua + adicionalBandeira) * 0.80 : 0;
 
-        
         double total = valorAgua + adicionalBandeira + taxaEsgoto;
 
-        return (consumoFaturado, tarifa, valorAgua, adicionalBandeira, taxaEsgoto, total);
+        return (consumoFaturado, tarifaMedia, valorAgua, adicionalBandeira, taxaEsgoto, total);
     }
 }

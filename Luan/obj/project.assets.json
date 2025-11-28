@@ -2943,19 +2943,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LUANGABRIELILIANOSUL\\.nuget\\packages\\": {}
+    "C:\\Users\\luani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LUANGABRIELILIANOSUL\\Documents\\AvaliacaoA2\\Luan\\Luan.csproj",
+      "projectUniqueName": "D:\\Documentos\\DesenvolvimentoDeSoftwareVisual\\Luan\\Luan.csproj",
       "projectName": "Luan",
-      "projectPath": "C:\\Users\\LUANGABRIELILIANOSUL\\Documents\\AvaliacaoA2\\Luan\\Luan.csproj",
-      "packagesPath": "C:\\Users\\LUANGABRIELILIANOSUL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LUANGABRIELILIANOSUL\\Documents\\AvaliacaoA2\\Luan\\obj\\",
+      "projectPath": "D:\\Documentos\\DesenvolvimentoDeSoftwareVisual\\Luan\\Luan.csproj",
+      "packagesPath": "C:\\Users\\luani\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\DesenvolvimentoDeSoftwareVisual\\Luan\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LUANGABRIELILIANOSUL\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\luani\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2973,11 +2973,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3016,7 +3011,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.121/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
